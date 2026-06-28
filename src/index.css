@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anton", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-light-bg: #F4F6F9;
+  --color-brand-light-primary: #0A1628;
+  --color-brand-light-cta: #FF6B35;
+  --color-brand-light-text: #1A1A2E;
+  --color-brand-light-muted: #6B7280;
+
+  --color-brand-dark-bg: #080E1A;
+  --color-brand-dark-primary: #0A1628;
+  --color-brand-dark-cta: #FF6B35;
+  --color-brand-dark-text: #E5E7EB;
+  --color-brand-dark-muted: #9CA3AF;
+}
+
+@layer base {
+  :root {
+    --bg-color: var(--color-brand-light-bg);
+    --text-color: var(--color-brand-light-text);
+    --muted-color: var(--color-brand-light-muted);
+    --primary-color: var(--color-brand-light-primary);
+    --cta-color: var(--color-brand-light-cta);
+  }
+
+  .dark {
+    --bg-color: var(--color-brand-dark-bg);
+    --text-color: var(--color-brand-dark-text);
+    --muted-color: var(--color-brand-dark-muted);
+    --primary-color: var(--color-brand-dark-primary);
+    --cta-color: var(--color-brand-dark-cta);
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/50 dark:bg-[#0A1628]/40 backdrop-blur-md border border-white/40 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+  }
+  
+  .glass-nav {
+    @apply bg-white/70 dark:bg-[#080E1A]/80 backdrop-blur-xl border-b border-white/40 dark:border-white/10;
+  }
+}

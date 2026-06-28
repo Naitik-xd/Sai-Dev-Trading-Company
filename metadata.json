@@ -1,0 +1,6 @@
+{
+  "name": "Sai Dev Trading Company",
+  "description": "A comprehensive industrial safety solutions provider.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
