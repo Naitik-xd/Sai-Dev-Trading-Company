@@ -88,13 +88,7 @@ export function Footer() {
               </li>
               <li className="pt-2">
                 <a href="tel:+918630006168" className="hover:text-cta-color transition-colors flex items-center group">
-                  <span>Sanjay Goyal: +91 8630006168</span>
-                  <ArrowUpRight size={14} className="ml-1 opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all" />
-                </a>
-              </li>
-              <li>
-                <a href="tel:+918445469598" className="hover:text-cta-color transition-colors flex items-center group">
-                  <span>Sanjay Goyal: +91 8445469598</span>
+                  <span>Kush: +91 8630006168</span>
                   <ArrowUpRight size={14} className="ml-1 opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all" />
                 </a>
               </li>

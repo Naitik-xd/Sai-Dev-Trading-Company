@@ -63,7 +63,7 @@ export function Hero() {
               <Phone size={16} />
             </div>
             <div className="flex flex-col items-start text-white">
-              <span className="text-xs text-white/70 font-medium uppercase tracking-wider">Call Sanjay Goyal</span>
+              <span className="text-xs text-white/70 font-medium uppercase tracking-wider">Call Kush</span>
               <span className="font-semibold">+91 8630006168</span>
             </div>
           </a>

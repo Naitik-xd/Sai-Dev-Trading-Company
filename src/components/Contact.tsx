@@ -87,7 +87,7 @@ export function Contact() {
             </div>
           </motion.div>
 
-          {/* Sanjay Goyal Card */}
+          {/* Kush Card */}
           <motion.div variants={scaleIn} className="bg-white dark:bg-[#0D1B2A] border border-gray-100 dark:border-white/10 border-t-4 border-t-cta-color p-8 group relative overflow-hidden flex flex-col items-center text-center text-gray-900 dark:text-white shadow-2xl hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,107,53,0.3)] transition-all duration-300">
             <div className="absolute inset-0 bg-gradient-to-br from-cta-color/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
@@ -95,15 +95,12 @@ export function Contact() {
               <Phone size={24} />
             </div>
             
-            <h3 className="font-display text-2xl uppercase tracking-wider mb-2">Sanjay Goyal</h3>
+            <h3 className="font-display text-2xl uppercase tracking-wider mb-2">Kush</h3>
             <div className="w-8 h-[2px] bg-cta-color mb-6 opacity-50 group-hover:opacity-100 transition-opacity"></div>
             
             <div className="flex flex-col space-y-3 w-full">
               <a href="tel:+918630006168" className="bg-cta-color text-white hover:bg-[#ff8559] hover:shadow-[0_0_15px_rgba(255,107,53,0.5)] py-3 px-4 font-mono font-semibold transition-all duration-300 active:scale-95">
                 +91 8630006168
-              </a>
-              <a href="tel:+918445469598" className="bg-cta-color text-white hover:bg-[#ff8559] hover:shadow-[0_0_15px_rgba(255,107,53,0.5)] py-3 px-4 font-mono font-semibold transition-all duration-300 active:scale-95">
-                +91 8445469598
               </a>
             </div>
           </motion.div>
