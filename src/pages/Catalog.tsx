@@ -75,14 +75,8 @@ function CategorySection({ title, index }: { title: string, index: number }) {
                               alt={`${title} Product`} 
                               className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" 
                               onError={(e) => {
-                                const img = e.currentTarget;
-                                if (!img.dataset.triedPublic) {
-                                  img.dataset.triedPublic = 'true';
-                                  img.src = '/public' + item.image;
-                                  return;
-                                }
-                                img.style.display = 'none';
-                                img.parentElement!.innerHTML = `
+                                e.currentTarget.style.display = 'none';
+                                e.currentTarget.parentElement!.innerHTML = `
                                   <div class="flex flex-col h-full justify-center items-center text-center bg-gray-100 dark:bg-[#0A1628]/50">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-image text-gray-300 dark:text-white/20 mb-4"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
                                     <p class="text-sm text-gray-400 dark:text-white/30 px-4">Image Unavailable</p>
