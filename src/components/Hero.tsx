@@ -77,12 +77,6 @@ export function Hero() {
             <span className="font-semibold">Email Us</span>
           </a>
 
-          <Link
-            to="/catalog"
-            className="w-full sm:w-auto bg-[#FFD700] text-[#0A1628] hover:bg-[#FFC000] hover:shadow-[0_0_20px_rgba(255,215,0,0.5)] transition-all duration-300 px-8 py-4 flex items-center justify-center space-x-3 group active:scale-95 mt-4 sm:mt-0"
-          >
-            <span className="font-semibold uppercase tracking-wider">Our Catalog</span>
-          </Link>
         </motion.div>
       </div>
 

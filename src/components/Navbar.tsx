@@ -20,7 +20,6 @@ export function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Our Catalog', href: '/catalog' },
     { name: 'About', href: '/#about' },
     { name: 'Why Us', href: '/#why-us' },
     { name: 'Reviews', href: '/#reviews' },
