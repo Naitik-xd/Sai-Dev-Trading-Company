@@ -71,10 +71,11 @@ function CategorySection({ title, index }: { title: string, index: number }) {
                         {item.image ? (
                           <div className="flex-grow w-full relative z-10 overflow-hidden bg-white">
                             <img 
-                              src={item.image} 
+                              src={`${import.meta.env.BASE_URL}${item.image.startsWith('/') ? item.image.slice(1) : item.image}?v=5`} 
                               alt={`${title} Product`} 
                               className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" 
                               onError={(e) => {
+                                console.error('Image failed to load:', e.currentTarget.src);
                                 e.currentTarget.style.display = 'none';
                                 e.currentTarget.parentElement!.innerHTML = `
                                   <div class="flex flex-col h-full justify-center items-center text-center bg-gray-100 dark:bg-[#0A1628]/50">
