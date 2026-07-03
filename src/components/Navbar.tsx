@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useTheme } from './ThemeProvider';
 import { Moon, Sun, Menu, X, Phone } from 'lucide-react';
 import { cn } from '../lib/utils';
+import { Link } from 'react-router-dom';
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -18,9 +19,11 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Why Us', href: '#why-us' },
-    { name: 'Reviews', href: '#reviews' },
+    { name: 'Home', href: '/' },
+    { name: 'Our Catalog', href: '/catalog' },
+    { name: 'About', href: '/#about' },
+    { name: 'Why Us', href: '/#why-us' },
+    { name: 'Reviews', href: '/#reviews' },
   ];
 
   return (
@@ -36,28 +39,33 @@ export function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           className="flex flex-col"
         >
-          <span className="font-display text-xl md:text-2xl tracking-tight leading-none uppercase">
-            Sai Dev
-          </span>
-          <span className="text-[8px] md:text-[10px] text-gray-500 dark:text-white/70 tracking-widest uppercase font-medium mt-0.5">
-            Trading Company
-          </span>
+          <Link to="/" className="flex flex-col">
+            <span className="font-display text-xl md:text-2xl tracking-tight leading-none uppercase">
+              Sai Dev
+            </span>
+            <span className="text-[8px] md:text-[10px] text-gray-500 dark:text-white/70 tracking-widest uppercase font-medium mt-0.5">
+              Trading Company
+            </span>
+          </Link>
         </motion.div>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8">
           <nav className="flex space-x-6">
             {navLinks.map((link, i) => (
-              <motion.a
+              <motion.div
                 key={link.name}
-                href={link.href}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="text-xs font-semibold uppercase tracking-wider text-gray-800 dark:text-white hover:text-cta-color transition-colors"
               >
-                {link.name}
-              </motion.a>
+                <Link
+                  to={link.href}
+                  className="text-xs font-semibold uppercase tracking-wider text-gray-800 dark:text-white hover:text-cta-color transition-colors"
+                >
+                  {link.name}
+                </Link>
+              </motion.div>
             ))}
           </nav>
           
@@ -69,14 +77,14 @@ export function Navbar() {
             >
               {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
             </button>
-            <a 
-              href="#contact"
+            <Link 
+              to="/#contact"
               className="flex items-center space-x-2 bg-cta-color text-white px-4 py-2 rounded-none font-medium text-xs hover:bg-[#ff8559] hover:shadow-[0_0_15px_rgba(255,107,53,0.5)] transition-all duration-300 relative overflow-hidden group"
             >
               <div className="absolute inset-0 w-0 bg-white/20 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
               <Phone size={14} className="relative z-10" />
               <span className="relative z-10 uppercase tracking-wide">Contact Us</span>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -108,23 +116,23 @@ export function Navbar() {
           >
             <div className="px-6 py-4 flex flex-col space-y-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-lg font-medium text-gray-900 dark:text-white hover:text-cta-color transition-colors"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
-              <a 
-                href="#contact"
+              <Link 
+                to="/#contact"
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center justify-center space-x-2 bg-cta-color text-white px-5 py-3 rounded-none font-medium mt-4"
               >
                 <Phone size={18} />
                 <span>Contact Us</span>
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}
