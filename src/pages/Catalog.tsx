@@ -14,10 +14,10 @@ function CategorySection({ title, index }: { title: string, index: number }) {
 
   // Use data if available, otherwise generate placeholders that map to expected file names
   const items = CATALOG_DATA[title] || [
-    { id: 1, image: `/web/${title.toLowerCase().replace(' ', '-')}-1.jpg` },
-    { id: 2, image: `/web/${title.toLowerCase().replace(' ', '-')}-2.jpg` },
-    { id: 3, image: `/web/${title.toLowerCase().replace(' ', '-')}-3.jpg` },
-    { id: 4, image: `/web/${title.toLowerCase().replace(' ', '-')}-4.jpg` }
+    { id: 1, image: `/web/${title.toLowerCase().replace(/\s+/g, '-')}-1.jpg` },
+    { id: 2, image: `/web/${title.toLowerCase().replace(/\s+/g, '-')}-2.jpg` },
+    { id: 3, image: `/web/${title.toLowerCase().replace(/\s+/g, '-')}-3.jpg` },
+    { id: 4, image: `/web/${title.toLowerCase().replace(/\s+/g, '-')}-4.jpg` }
   ];
 
   const handlePrev = () => {
