@@ -14,10 +14,10 @@ function CategorySection({ title, index }: { title: string, index: number }) {
 
   // Use data if available, otherwise generate placeholders that map to expected file names
   const items = CATALOG_DATA[title] || [
-    { id: 1, image: `/images/${title.toLowerCase().replace(' ', '-')}-1.jpg` },
-    { id: 2, image: `/images/${title.toLowerCase().replace(' ', '-')}-2.jpg` },
-    { id: 3, image: `/images/${title.toLowerCase().replace(' ', '-')}-3.jpg` },
-    { id: 4, image: `/images/${title.toLowerCase().replace(' ', '-')}-4.jpg` }
+    { id: 1, image: `/web/${title.toLowerCase().replace(' ', '-')}-1.jpg` },
+    { id: 2, image: `/web/${title.toLowerCase().replace(' ', '-')}-2.jpg` },
+    { id: 3, image: `/web/${title.toLowerCase().replace(' ', '-')}-3.jpg` },
+    { id: 4, image: `/web/${title.toLowerCase().replace(' ', '-')}-4.jpg` }
   ];
 
   const handlePrev = () => {
@@ -71,19 +71,9 @@ function CategorySection({ title, index }: { title: string, index: number }) {
                         {item.image ? (
                           <div className="flex-grow w-full relative z-10 overflow-hidden bg-white">
                             <img 
-                              src={`${import.meta.env.BASE_URL}${item.image.startsWith('/') ? item.image.slice(1) : item.image}?v=5`} 
+                              src={item.image} 
                               alt={`${title} Product`} 
                               className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" 
-                              onError={(e) => {
-                                console.error('Image failed to load:', e.currentTarget.src);
-                                e.currentTarget.style.display = 'none';
-                                e.currentTarget.parentElement!.innerHTML = `
-                                  <div class="flex flex-col h-full justify-center items-center text-center bg-gray-100 dark:bg-[#0A1628]/50">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-image text-gray-300 dark:text-white/20 mb-4"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                                    <p class="text-sm text-gray-400 dark:text-white/30 px-4">Image Unavailable</p>
-                                  </div>
-                                `;
-                              }}
                             />
                           </div>
                         ) : (
