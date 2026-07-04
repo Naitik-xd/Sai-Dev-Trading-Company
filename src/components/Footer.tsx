@@ -105,12 +105,7 @@ export function Footer() {
                   <ArrowUpRight size={14} className="ml-1 opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all" />
                 </a>
               </li>
-              <li>
-                <Link to="/catalog" className="text-cta-color hover:text-[#ff8559] transition-colors flex items-center group font-semibold">
-                  <span>View Our Catalog</span>
-                  <ArrowUpRight size={14} className="ml-1 opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all" />
-                </Link>
-              </li>
+
             </ul>
           </div>
         </div>
