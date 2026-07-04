@@ -15,6 +15,12 @@
   --color-brand-dark-cta: #FF6B35;
   --color-brand-dark-text: #E5E7EB;
   --color-brand-dark-muted: #9CA3AF;
+
+  --color-bg-color: var(--bg-color);
+  --color-text-color: var(--text-color);
+  --color-muted-color: var(--muted-color);
+  --color-primary-color: var(--primary-color);
+  --color-cta-color: var(--cta-color);
 }
 
 @layer base {

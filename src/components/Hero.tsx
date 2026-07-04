@@ -30,10 +30,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-5xl md:text-7xl lg:text-8xl uppercase tracking-tight leading-[0.9] max-w-5xl !text-[#FFFFFF] opacity-100 relative z-30 [text-shadow:0_0_30px_rgba(255,107,53,0.4)] dark:[text-shadow:0_0_30px_rgba(255,107,53,0.4)]"
+          className="font-display text-5xl md:text-7xl lg:text-8xl uppercase tracking-tight leading-[0.9] max-w-5xl text-gray-900 dark:text-white opacity-100 relative z-30 [text-shadow:0_0_30px_rgba(255,107,53,0.2)] dark:[text-shadow:0_0_30px_rgba(255,107,53,0.4)]"
         >
           A House of <br />
-          <span className="!text-[#FF6B35] [text-shadow:none]">Complete</span> <br />
+          <span className="text-cta-color [text-shadow:none]">Complete</span> <br />
           Industrial Safety Solutions
         </motion.h1>
 
