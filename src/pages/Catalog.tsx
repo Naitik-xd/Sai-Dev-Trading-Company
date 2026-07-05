@@ -73,7 +73,7 @@ const catalogData = [
 function ProductCarousel({ data }: { data: { category: string, folder: string, files: string[] } }) {
   const { category, folder, files } = data;
   const items = files.length > 0 
-    ? files.map((file, i) => ({ id: i, image: `/Web/${folder}/${file}` }))
+    ? files.map((file, i) => ({ id: i, image: `/Web/${encodeURIComponent(folder)}/${encodeURIComponent(file)}` }))
     : [{ id: 0, image: null }];
   
   const [activeIndex, setActiveIndex] = useState(Math.floor(items.length / 2));
