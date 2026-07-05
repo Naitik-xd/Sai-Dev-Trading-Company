@@ -111,9 +111,14 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-200 dark:border-white/10">
-          <p className="text-gray-500 dark:text-white/50 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Sai Dev Trading Company. All rights reserved.
-          </p>
+          <div className="flex flex-col md:flex-row items-center md:space-x-4 mb-4 md:mb-0 text-center md:text-left">
+            <p className="text-gray-500 dark:text-white/50 text-sm">
+              &copy; {new Date().getFullYear()} Sai Dev Trading Company. All rights reserved.
+            </p>
+            <Link to="/catalog" className="text-xs text-gray-400 dark:text-white/30 hover:text-gray-600 dark:hover:text-white/60 transition-colors mt-2 md:mt-0">
+              Our Catalog
+            </Link>
+          </div>
           
           <div className="flex items-center space-x-6">
             <button

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Home } from './pages/Home';
+import { Catalog } from './pages/Catalog';
 import { Footer } from './components/Footer';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -32,6 +33,7 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/catalog" element={<Catalog />} />
         </Routes>
         <Footer />
         <Analytics />
