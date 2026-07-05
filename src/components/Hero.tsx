@@ -71,11 +71,18 @@ export function Hero() {
 
           <a
             href="mailto:saidev.stg@gmail.com"
-            className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-all duration-300 px-8 py-4 flex items-center justify-center space-x-3 group active:scale-95"
+            className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 text-gray-900 dark:text-white hover:bg-black/5 dark:hover:bg-white/20 transition-all duration-300 px-8 py-4 flex items-center justify-center space-x-3 group active:scale-95"
           >
             <Mail size={18} />
             <span className="font-semibold">Email Us</span>
           </a>
+
+          <Link
+            to="/catalog"
+            className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 text-gray-900 dark:text-white hover:bg-black/5 dark:hover:bg-white/20 transition-all duration-300 px-8 py-4 flex items-center justify-center space-x-3 group active:scale-95"
+          >
+            <span className="font-semibold uppercase tracking-wider">Our Catalog</span>
+          </Link>
 
         </motion.div>
       </div>

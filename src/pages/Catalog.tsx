@@ -34,11 +34,6 @@ const catalogData = [
     files: ["IMG-20260703-WA0113.jpg","IMG-20260703-WA0114.jpg","IMG-20260703-WA0115.jpg","IMG-20260703-WA0116.jpg","IMG-20260703-WA0117.jpg","IMG-20260703-WA0118.jpg","IMG-20260703-WA0119.jpg","IMG-20260703-WA0120.jpg","IMG-20260703-WA0121.jpg","IMG-20260703-WA0122.jpg","IMG-20260703-WA0123.jpg","IMG-20260703-WA0124.jpg","IMG-20260703-WA0125.jpg","IMG-20260703-WA0126.jpg","IMG-20260703-WA0127.jpg","IMG-20260703-WA0128.jpg","IMG-20260703-WA0129.jpg","IMG-20260703-WA0130.jpg","IMG-20260703-WA0131.jpg","IMG-20260703-WA0132.jpg","IMG-20260703-WA0133.jpg","IMG-20260703-WA0134.jpg","IMG-20260703-WA0135.jpg","IMG-20260703-WA0136.jpg","IMG-20260703-WA0137.jpg","IMG-20260703-WA0138.jpg","IMG-20260703-WA0139.jpg","IMG-20260703-WA0140.jpg","IMG-20260703-WA0141.jpg","IMG-20260703-WA0142.jpg","IMG-20260703-WA0143.jpg","IMG-20260703-WA0149.jpg","IMG-20260703-WA0150.jpg","IMG-20260703-WA0151.jpg","IMG-20260703-WA0152.jpg","IMG-20260703-WA0153.jpg","IMG-20260703-WA0154.jpg","IMG-20260703-WA0155.jpg","IMG-20260703-WA0156.jpg","IMG-20260703-WA0157.jpg","IMG-20260703-WA0158.jpg","IMG-20260703-WA0159.jpg","IMG-20260703-WA0160.jpg","IMG-20260703-WA0161.jpg","IMG-20260703-WA0162.jpg","IMG-20260703-WA0163.jpg","IMG-20260703-WA0164.jpg","IMG-20260703-WA0165.jpg","IMG-20260703-WA0166.jpg","IMG-20260703-WA0167.jpg","IMG-20260703-WA0168.jpg","IMG-20260703-WA0169.jpg"]
   },
   {
-    category: "Safety Goggles",
-    folder: "Safety Goggles",
-    files: []
-  },
-  {
     category: "Safety Harness",
     folder: "Safety Harness ",
     files: ["IMG-20260703-WA0007.jpg","IMG-20260703-WA0008.jpg","IMG-20260703-WA0009.jpg","IMG-20260703-WA0010.jpg"]
@@ -221,6 +216,9 @@ export function Catalog() {
             Product <span className="text-cta-color">Catalog</span>
           </h1>
           <div className="w-16 h-1 bg-cta-color mx-auto mb-6"></div>
+          <p className="text-cta-color text-lg md:text-xl font-medium">
+            We have many more products available. For enquiries, call <a href="tel:+918126085044" className="hover:underline hover:text-white transition-colors">Amit Kumar: +91 8126085044</a> or <a href="tel:+918630006168" className="hover:underline hover:text-white transition-colors">Kush: +91 8630006168</a>
+          </p>
         </div>
 
         <div className="flex flex-col">
